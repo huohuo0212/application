@@ -30,6 +30,13 @@ class MainWindow(QMainWindow):
         #自动适应图像的大小
         self.base_image_label.setScaledContents(True)
         self.drone_image_label.setScaledContents(True)
+       
+        #使用QScrollArea类创建一个滚动区域对象，并将其命名为self.base_scroll_area
+        self.base_scroll_area = QScrollArea(self)
+        self.base_scroll_area.setWidget(self.base_image_label)
+        self.drone_scroll_area = QScrollArea(self)
+       
+        self.drone_scroll_area.setWidget(self.drone_image_label)
 #创建一个打开的菜单
         menu = self.menuBar()
         file_menu = menu.addMenu("打开")
