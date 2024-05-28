@@ -23,6 +23,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Our App")
         self.base_image_path = None
         self.drone_image_path = None
+        self.setGeometry(100, 100, 1200, 600)  # 调整窗口大小以适应两个图像视图
 
         self.base_image_label=QLabel()#用于显示基准影像的Qlabel
         self.drone_image_label=QLabel()
